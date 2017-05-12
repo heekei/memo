@@ -2,43 +2,91 @@ html,
 body {
     width: 100%;
     height: 100%;
+    background: url(../images/background.jpg);
 }
 
-@themeColor: #d9edf7;
+@themeColor: #ffe456;
 @fontColor: #000;
 .desktop {
-    text-align: center;
+    text-align: justify;
 }
-
+.sidebar{}
 .memo {
     display: inline-block;
-    width: 30%;
-    min-width: 300px;
-    max-width: 340px;
+    width: 100%;
+    // min-width: 300px;
+    // max-width: 340px;
     background: @themeColor;
     margin: 10px;
     vertical-align: top;
     border: 1px solid darken(@themeColor, 5%);
     box-shadow: 1px 1px 10px 0px lighten(@themeColor, 1%);
     &-title {
+        position: relative;
         font-size: 16px;
         text-align: left;
         padding: 0 20px 0 10px;
         line-height: 30px;
-        outline: none;
         color: lighten(@fontColor, 40%);
-        &:focus {
-            color: @fontColor;
+        &-input {
+            display: inline-block;
+            width: 100%;
+            border: none;
+            outline: none;
+            background: transparent;
+            text-overflow: ellipsis;
+            &:focus {
+                color: @fontColor; // text-overflow: initial;
+            }
         }
     }
     &-content {
-        max-height: 200px;
+        height: 40px; // max-height: 40px;
         overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
         outline: none;
-        padding: 10px 20px 10px 10px;
+        // padding: 10px 20px 10px 10px;
+        padding: 10px;
         text-align: left;
+        transition: all 0.4s ease-in-out;
         &:focus {
+            height: 200px; // max-height: 200px;
             overflow: auto;
+            white-space: normal;
         }
+    }
+}
+
+.btn- {
+    &close {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        border: none;
+        background: transparent url(../images/icon-close.png) no-repeat center;
+        background-size: contain;
+        height: 10px;
+        width: 10px;
+        padding: 0;
+        outline: none;
+    }
+    &add {
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        display: inline-block;
+        width: 72px;
+        height: 72px;
+        margin: 10px;
+        font-size: 100px;
+        padding: 0;
+        line-height: 72px; // color: #76b6e4;
+        // background: #007d00;
+        color: #737373;
+        background: @themeColor;
+        box-shadow: 0px 0px 10px 0px #655b19;
+        border: 0;
+        outline: none;
     }
 }

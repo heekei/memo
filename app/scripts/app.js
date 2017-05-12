@@ -18,7 +18,7 @@ angular
         'ngTouch',
         'ui.router',
         "ui.bootstrap",
-        'customControl'
+        'contenteditable'
     ])
     .run(['$rootScope', '$state', '$stateParams', function ($rootScope, $state, $stateParams) {
         $rootScope.$state = $state;
