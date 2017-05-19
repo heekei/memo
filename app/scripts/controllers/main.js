@@ -101,7 +101,7 @@ angular.module('memoApp')
                 }
             }
         }
-        $scope.memos = locals.getObject('memos');
+        $scope.memos = locals.getObject('memos') || [];
         $scope.autoSave = save;
         $scope.removeById = removeById;
         $scope.create = createMemo;
