@@ -24,8 +24,15 @@ angular
         $rootScope.$state = $state;
         $rootScope.$stateParams = $stateParams;
     }])
-    .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+    .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
+        $locationProvider.hashPrefix("");
         $stateProvider
+            .state("app", {
+                url: '',
+                templateUrl: 'views/main.html',
+                controller: 'MainCtrl',
+                title: '备忘录'
+            })
             .state("home", {
                 url: '/',
                 templateUrl: 'views/main.html',

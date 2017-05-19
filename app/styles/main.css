@@ -8,6 +8,7 @@ body {
   text-align: justify;
 }
 .memo {
+  position: relative;
   display: inline-block;
   width: 100%;
   background: #ffe456;
@@ -45,10 +46,16 @@ body {
   text-align: left;
   transition: all 0.4s ease-in-out;
 }
+.memo-content img {
+  max-width: 100%;
+}
 .memo-content:focus {
   height: 200px;
   overflow: auto;
   white-space: normal;
+}
+.memo-content:focus + .btn-spread {
+  display: block;
 }
 .btn-close {
   position: absolute;
@@ -75,4 +82,23 @@ body {
   box-shadow: 0px 0px 10px 0px #655b19;
   border: 0;
   outline: none;
+}
+.btn-spread {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 15px;
+  height: 15px;
+  background: #fff url(../images/icon-spread.png) no-repeat center;
+  background-size: contain;
+}
+.editor-modal .simditor-body {
+  height: 350px;
+  overflow: auto;
+}
+.editor-modal .modal-title {
+  font-size: 24px;
+}
+.editor-modal .modal-body {
+  background: #eee;
 }

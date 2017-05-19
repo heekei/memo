@@ -8,8 +8,9 @@
                 <input class="memo-title-input" type="text" name="" ng-model="memo.title" placeholder="标题" ng-change="autoSave(memo.id)">
                 <button class="btn-close" ng-click="removeById(memo.id)"></button>
             </header>
-            <section class="memo-content" ng-model="memo.content" contenteditable="true" strip-br="true" strip-tags="true" select-non-editable="true"
+            <section simditor class="memo-content" ng-model="memo.content" contenteditable="true" strip-br="true" strip-tags="true" select-non-editable="true"
                 ng-change="autoSave(memo.id)" placeholder="内容"></section>
+            <i class="btn-spread" ng-click="showEditor(memo.id)"></i>
         </article>
     </div>
 </div>
