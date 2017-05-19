@@ -21,6 +21,10 @@ angular.module('memoApp')
     })
     .controller('MainCtrl', ['$rootScope', '$scope', 'locals', '$timeout', '$uibModal', function ($rootScope, $scope, locals, $timeout, $uibModal) {
         // locals.setObject('memos', []);
+        $scope.memos = locals.getObject('memos');
+        if (!$scope.memos.length) {
+            $scope.memos = [];
+        }
         $scope.cols = 4;
         $scope.getColsArr = function (cols) {
             var tmp = [];
@@ -101,7 +105,6 @@ angular.module('memoApp')
                 }
             }
         }
-        $scope.memos = locals.getObject('memos') || [];
         $scope.autoSave = save;
         $scope.removeById = removeById;
         $scope.create = createMemo;
