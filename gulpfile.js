@@ -151,8 +151,8 @@ gulp.task('clean:dist', function (cb) {
 });
 
 gulp.task('client:build', ['html', 'styles'], function () {
-  var jsFilter = $.filter('**/*.js');
-  var cssFilter = $.filter('**/*.css');
+  var jsFilter = $.filter('/**/*.js');
+  var cssFilter = $.filter('/**/*.css');
 
   return gulp.src(paths.views.main)
     .pipe($.useref({ searchPath: [yeoman.app, '.tmp'] }))
@@ -163,8 +163,8 @@ gulp.task('client:build', ['html', 'styles'], function () {
     .pipe(cssFilter)
     .pipe($.minifyCss({ cache: true }))
     .pipe(cssFilter.restore())
-    .pipe($.rev())
-    .pipe($.revReplace())
+    // .pipe($.rev())
+    // .pipe($.revReplace())
     .pipe(gulp.dest(yeoman.dist));
 });
 
