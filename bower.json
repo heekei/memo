@@ -13,9 +13,7 @@
     "angular-ui-router": "ui-router#^1.0.3+hybrid-2.0.0-2",
     "angular-bootstrap": "^2.5.0",
     "angular-contenteditable": "^0.3.8",
-    "simditor": "^2.3.6"
-  },
-  "devDependencies": {
+    "simditor": "^2.3.6",
     "angular-mocks": "^1.4.0"
   },
   "appPath": "app",
