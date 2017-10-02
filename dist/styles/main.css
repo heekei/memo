@@ -1,0 +1,104 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: url(../images/background.jpg);
+}
+.desktop {
+  text-align: justify;
+}
+.memo {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  background: #ffe456;
+  margin: 10px;
+  vertical-align: top;
+  border: 1px solid #ffe03d;
+  box-shadow: 1px 1px 10px 0px #ffe55b;
+}
+.memo-title {
+  position: relative;
+  font-size: 16px;
+  text-align: left;
+  padding: 0 20px 0 10px;
+  line-height: 30px;
+  color: #666666;
+}
+.memo-title-input {
+  display: inline-block;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  text-overflow: ellipsis;
+}
+.memo-title-input:focus {
+  color: #000;
+}
+.memo-content {
+  height: 40px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  outline: none;
+  padding: 10px;
+  text-align: left;
+  transition: all 0.4s ease-in-out;
+}
+.memo-content img {
+  max-width: 100%;
+}
+.memo-content:focus {
+  height: 200px;
+  overflow: auto;
+  white-space: normal;
+}
+.memo-content:focus + .btn-spread {
+  display: block;
+}
+.btn-close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  border: none;
+  background: transparent url(../images/icon-close.png) no-repeat center;
+  background-size: contain;
+  height: 10px;
+  width: 10px;
+  padding: 0;
+  outline: none;
+}
+.btn-add {
+  display: inline-block;
+  width: 72px;
+  height: 72px;
+  margin: 10px;
+  font-size: 100px;
+  padding: 0;
+  line-height: 72px;
+  color: #737373;
+  background: #ffe456;
+  box-shadow: 0px 0px 10px 0px #655b19;
+  border: 0;
+  outline: none;
+}
+.btn-spread {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 15px;
+  height: 15px;
+  background: #fff url(../images/icon-spread.png) no-repeat center;
+  background-size: contain;
+}
+.editor-modal .simditor-body {
+  height: 350px;
+  overflow: auto;
+}
+.editor-modal .modal-title {
+  font-size: 24px;
+}
+.editor-modal .modal-body {
+  background: #eee;
+}
