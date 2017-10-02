@@ -1,0 +1,16 @@
+<div class="sidebar col-md-1">
+    <button class="btn-add" ng-click="create()">+</button>
+</div>
+<div class="desktop col-md-11">
+    <div class="{{'col-lg-'+12/cols}}" ng-repeat="i in getColsArr(cols)">
+        <article class="memo" ng-repeat="memo in memos | column:i:cols">
+            <header class="memo-title">
+                <input class="memo-title-input" type="text" name="" ng-model="memo.title" placeholder="标题" ng-change="autoSave(memo.id)">
+                <button class="btn-close" ng-click="removeById(memo.id)"></button>
+            </header>
+            <section simditor class="memo-content" ng-model="memo.content" contenteditable="true" strip-br="true" strip-tags="true" select-non-editable="true"
+                ng-change="autoSave(memo.id)" placeholder="内容"></section>
+            <i class="btn-spread" ng-click="showEditor(memo.id)"></i>
+        </article>
+    </div>
+</div>
