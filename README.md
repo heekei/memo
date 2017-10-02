@@ -1,3 +1,3 @@
 # memo
 
-Demo : [https://h-os.online/memo/dist/](https://h-os.online/memo/dist/)
+Demo : [https://heekei.github.io/memo/](https://heekei.github.io/memo/)
